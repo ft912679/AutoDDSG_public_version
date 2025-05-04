@@ -1,0 +1,50 @@
+{
+    "title": "Customer Satisfaction Survey",
+    "description": "We appreciate your feedback! Please take a few minutes to answer the following questions.",
+    "questions": [
+        {
+            "id": 1,
+            "type": "single_choice",
+            "question": "How satisfied are you with the charging experience for our EV charger?",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied.",
+            "options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "multiple_choice",
+            "question": "Which of the following EV chargers have you used? (Select all that apply)",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied."
+        },
+        {
+            "id": 3,
+            "type": "rating",
+            "question": "Rate the quality of our EV charging service:",
+            "scale": {
+                "min": 1,
+                "max": 5,
+                "labels": {
+                    "1": "Very poor",
+                    "5": "Excellent"
+                }
+            },
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied."
+        },
+        {
+            "id": 4,
+            "type": "text",
+            "question": "What can we do to improve your EV charging experience?",
+            "placeholder": "Your feedback here...",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied."
+        }
+    ]
+}

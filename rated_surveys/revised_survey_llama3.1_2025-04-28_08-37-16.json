@@ -1,0 +1,74 @@
+{
+    "title": "Customer Satisfaction Survey",
+    "description": "We appreciate your feedback! Please take a few minutes to answer the following questions.",
+    "questions": [
+        {
+            "id": 1,
+            "type": "single_choice",
+            "question": "How satisfied are you with the charging experience for our EV charger in your company?",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied.",
+            "options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "multiple_choice",
+            "question": "Which of the following EV chargers have you used in your company?",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied."
+        },
+        {
+            "id": 3,
+            "type": "rating",
+            "question": "Rate the quality of our EV charger support:",
+            "scale": {
+                "min": 1,
+                "max": 5,
+                "labels": {
+                    "1": "Very poor",
+                    "5": "Excellent"
+                }
+            },
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied."
+        },
+        {
+            "id": 4,
+            "type": "text",
+            "question": "What can we do to improve your experience with our EV charger?",
+            "placeholder": "Your feedback here...",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied."
+        },
+        {
+            "id": 5,
+            "type": "single_choice",
+            "question": "What time of day do you prefer to charge your vehicle?",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied.",
+            "options": [
+                "Morning",
+                "Afternoon",
+                "Evening"
+            ]
+        },
+        {
+            "id": 6,
+            "type": "single_choice",
+            "question": "How long do you prefer your vehicle to be unplugged?",
+            "data_driven_method": "No",
+            "data_driven_method_description": "No data-driven method applied.",
+            "options": [
+                "Less than 30 minutes",
+                "30 minutes to 1 hour",
+                "More than 1 hour"
+            ]
+        }
+    ]
+}

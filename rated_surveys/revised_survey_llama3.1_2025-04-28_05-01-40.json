@@ -1,0 +1,50 @@
+{
+    "title": "Customer Satisfaction Survey",
+    "description": "We appreciate your feedback! Please take a few minutes to answer the following questions.",
+    "questions": [
+        {
+            "id": 1,
+            "type": "single_choice",
+            "question": "How satisfied are you with the charging experience for our EV charger?",
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's satisfaction by looking at the TotalActiveEnergyImportWh and TotalReactiveEnergyImportWh. If the total active energy import is high and the total reactive energy import is low, it may indicate that the customer is satisfied with the charging experience.Data-driven method applied. Python code generated is: import pandas as pd\n\ndef analyze_data(data):\n    # Filter the data to only include rows where TotalActiveEnergyImportWh is high and TotalReactiveEnergyImportWh is low\n    filtered_data = data[(data['TotalActiveEnergyImportWh'] > 1000) & (data['TotalReactiveEnergyImportWh'] < 500)]\n\n    # Group the data by DeviceType and count the number of occurrences for each type\n    charger_usage = filtered_data.groupby('DeviceType')['ConnectorIndex'].count().reset_index()\n\n    return charger_usage\n\n# Load the dataset\nbig_db= pd.read_csv(r'C:\\\\\\Users\\\\142685_admin\\\\OneDrive - UTS\\\\Future Transport Mobility Work\\\\WORK - PROJECTS\\\\2024\\\\JETCHARGE\\\\Data-Illuminate\\\\big_data.txt', sep='\\\\t')\n\n# Analyze the data\nresult = analyze_data(big_db)\nprint(result). The result is: Empty DataFrame\nColumns: [DeviceType, ConnectorIndex]\nIndex: []",
+            "options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "multiple_choice",
+            "question": "Which of the following EV chargers have you used?",
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's charger usage by looking at the DeviceType and ConnectorIndex. If the device type is Level 2 AC or DC Fast Charger and the connector index is consistent, it may indicate that the customer has used that charger.Data-driven method applied. Python code generated is: import pandas as pd\n\ndef analyze_data(data):\n    # Filter the data to only include rows where DeviceType is 'Level 2 AC' or 'DC Fast Charger'\n    filtered_data = data[data['DeviceType'].isin(['Level 2 AC', 'DC Fast Charger'])]\n\n    # Group the data by DeviceType and count the number of occurrences for each type\n    charger_usage = filtered_data.groupby('DeviceType')['ConnectorIndex'].count().reset_index()\n\n    return charger_usage\n\n# Load the dataset\nbig_db= pd.read_csv(r'C:\\\\\\Users\\\\142685_admin\\\\OneDrive - UTS\\\\Future Transport Mobility Work\\\\WORK - PROJECTS\\\\2024\\\\JETCHARGE\\\\Data-Illuminate\\\\big_data.txt', sep='\\\\t')\n\n# Analyze the data\nresult = analyze_data(big_db)\nprint(result). The result is: Empty DataFrame\nColumns: [DeviceType, ConnectorIndex]\nIndex: []"
+        },
+        {
+            "id": 3,
+            "type": "rating",
+            "question": "Rate the quality of our customer support:",
+            "scale": {
+                "min": 1,
+                "max": 5,
+                "labels": {
+                    "1": "Very poor",
+                    "5": "Excellent"
+                }
+            },
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's satisfaction with customer support by looking at the TotalActiveEnergyImportWh and TotalReactiveEnergyImportWh. If the total active energy import is high and the total reactive energy import is low, it may indicate that the customer is satisfied with the customer support.Data-driven method applied. Python code generated is: import pandas as pd\n\ndef analyze_data(data):\n    # Filter the data to only include rows where TotalActiveEnergyImportWh is high and TotalReactiveEnergyImportWh is low\n    filtered_data = data[(data['TotalActiveEnergyImportWh'] > 1000) & (data['TotalReactiveEnergyImportWh'] < 500)]\n\n    # Group the data by DeviceType and count the number of occurrences for each type\n    charger_usage = filtered_data.groupby('DeviceType')['ConnectorIndex'].count().reset_index()\n\n    return charger_usage\n\n# Load the dataset\nbig_db= pd.read_csv(r'C:\\\\\\Users\\\\142685_admin\\\\OneDrive - UTS\\\\Future Transport Mobility Work\\\\WORK - PROJECTS\\\\2024\\\\JETCHARGE\\\\Data-Illuminate\\\\big_data.txt', sep='\\\\t')\n\n# Analyze the data\nresult = analyze_data(big_db)\nprint(result). The result is: Empty DataFrame\nColumns: [DeviceType, ConnectorIndex]\nIndex: []"
+        },
+        {
+            "id": 4,
+            "type": "text",
+            "question": "What can we do to improve your charging experience?",
+            "placeholder": "Your feedback here...",
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's satisfaction with the charging experience by looking at the TotalActiveEnergyImportWh and TotalReactiveEnergyImportWh. If the total active energy import is high and the total reactive energy import is low, it may indicate that the customer is satisfied with the charging experience.Data-driven method applied. Python code generated is: import pandas as pd\n\ndef analyze_data(data):\n    # Filter the data to only include rows where TotalActiveEnergyImportWh is high and TotalReactiveEnergyImportWh is low\n    filtered_data = data[(data['TotalActiveEnergyImportWh'] > 1000) & (data['TotalReactiveEnergyImportWh'] < 500)]\n\n    # Group the data by DeviceType and count the number of occurrences for each type\n    charger_usage = filtered_data.groupby('DeviceType')['ConnectorIndex'].count().reset_index()\n\n    return charger_usage\n\n# Load the dataset\nbig_db= pd.read_csv(r'C:\\\\\\Users\\\\142685_admin\\\\OneDrive - UTS\\\\Future Transport Mobility Work\\\\WORK - PROJECTS\\\\2024\\\\JETCHARGE\\\\Data-Illuminate\\\\big_data.txt', sep='\\\\t')\n\n# Analyze the data\nresult = analyze_data(big_db)\nprint(result). The result is: Empty DataFrame\nColumns: [DeviceType, ConnectorIndex]\nIndex: []"
+        }
+    ]
+}

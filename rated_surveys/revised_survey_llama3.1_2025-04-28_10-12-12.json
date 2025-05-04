@@ -1,0 +1,72 @@
+{
+    "title": "Customer Satisfaction Survey for EV Charger Provider",
+    "description": "We appreciate your feedback! Please take a few minutes to answer the following questions.",
+    "questions": [
+        {
+            "id": 1,
+            "type": "single_choice",
+            "question": "How satisfied are you with our service?",
+            "options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's satisfaction by looking at the 'TotalCost' column, which reflects the cost incurred during each session. If the total cost is low, it may indicate that the customer is satisfied with the service."
+        },
+        {
+            "id": 2,
+            "type": "multiple_choice",
+            "question": "Which of the following charging behaviors do you exhibit most frequently?",
+            "options": [
+                "Charging during peak hours (7am-9am, 4pm-6pm)",
+                "Charging during off-peak hours (other times)",
+                "I don't charge my vehicle at this location"
+            ],
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's charging behavior by looking at the 'transaction_start' column and identifying peak and off-peak hours. This will help us understand when customers are most likely to charge their vehicles."
+        },
+        {
+            "id": 3,
+            "type": "rating",
+            "question": "Rate your preferred time for charging:",
+            "scale": {
+                "min": 1,
+                "max": 5,
+                "labels": {
+                    "1": "Early morning (6am-8am)",
+                    "2": "Late evening (7pm-9pm)",
+                    "3": "Mid-day (12pm-2pm)",
+                    "4": "Anytime",
+                    "5": "I don't have a preferred time"
+                }
+            },
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's preferred charging time by looking at the 'transaction_start' column and identifying patterns in when customers charge their vehicles."
+        },
+        {
+            "id": 4,
+            "type": "text",
+            "question": "What is your preferred unplug time?",
+            "placeholder": "Please specify a specific time or range of times",
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's preferred unplug time by looking at the 'transaction_end' column and identifying patterns in when customers stop charging their vehicles."
+        },
+        {
+            "id": 5,
+            "type": "single_choice",
+            "question": "How often do you use our EV charger?",
+            "options": [
+                "Daily",
+                "Several times a week",
+                "About once a week",
+                "Less than once a week",
+                "Rarely"
+            ],
+            "data_driven_method": "Yes",
+            "data_driven_method_description": "Based on the available dataset, we can analyze the customer's usage frequency by looking at the 'transaction_start' column and identifying patterns in when customers charge their vehicles."
+        }
+    ]
+}
